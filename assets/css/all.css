@@ -1,0 +1,43 @@
+header .navbar {padding: 15px 0; margin-bottom: 0px; }
+header .navbar-inverse {background: #00323D; border-color: #00323D; }
+header .navbar-header, header .navbar-header a { font-size: 30px; float: none; text-align: center; }
+header .navbar-inverse .navbar-brand { color: #fff; }
+header .navbar-nav li a { background: #5cb85c; color: #fff !important; border: #5cb85c;}
+header .navbar-nav li a:hover { background: #4DA04D!important; }
+
+main { padding: 0 0 50px; }
+
+.filter-produtos { margin: 20px 0; }
+.preco { color: #337AC1; }
+
+#contato {background: #eee; padding: 20px; }
+textarea { resize: none; }
+footer{background-color: #333; color: #fff; padding: 20px 0px; text-align: center; }
+
+.img-imovel {margin-top: 25px; }
+
+.card img { height: 168px; }
+.card .caption h4 { height: 38px; }
+.card .caption p {color: #337AC1; font-size: 20px; }
+
+@media screen and (max-width: 991px ) {
+	.add-imovel a { width: 100%; }
+}
+
+.slider { 
+	background: url('../img/banner_01_mobile.jpg') no-repeat;
+	background-position: top center;
+	background-size: 100% auto;
+	width: 100%;
+	min-height: 200px;
+}
+
+@media screen and (min-width: 550px ) {
+	.slider { 
+		background: url('../img/banner_01.jpg') no-repeat;
+		background-position: top center;
+		background-size: 1920px auto;
+		width: 100%;
+		height: 400px;
+	}
+}

@@ -1,0 +1,41 @@
+<div class="slider">
+</div>
+
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-md-12">
+			<h1>Nossos Imóveis</h1>
+		</div>
+
+        <div class="col-xs-12 col-md-10">
+	        <form action="" class="form-horizontal">
+	            <div class="form-group form-group-lg">
+	            	<label for="filtro" class="col-md-2 control-label">Filtro:</label>
+	            	<div class="col-md-10">
+		            	<input id="filtro" ng-model="filtro" ng-model-options="{debounce: 300}" type="text" class="form-control" placeholder="Filtre seus resultados aqui">
+		            </div>
+	            </div>
+	        </form>
+        </div>
+
+        <div class="col-xs-12 col-md-2 add-imovel text-right">
+        	<a href="#/imovel/add" class="btn btn-success btn-lg">Novo imóvel</a>
+        </div>
+
+    </div>
+
+	<div class="row">
+		<div class="col-xs-12 col-md-3 card" ng-repeat="imovel in imoveis | filter: filtro">
+			<figure class="thumbnail text-center">
+				<img src="{{imovel.imagens[0].url}}" alt="{{imovel.nome}}" class="img-responsive item-top">
+				<figcaption class="caption">
+					<h4>{{imovel.local}}</h4>
+					<p>{{imovel.preco}}</p>
+				</figcaption>
+				<a href="#/imovel/{{imovel.id}}" class="btn btn-primary item-bottom">Ver detalhes</a>
+			</figure>
+		</div>
+	</div>
+</div>

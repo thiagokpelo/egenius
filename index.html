@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>eGenius Imóveis</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Styles Online -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/all.css">
+
+</head>
+
+<body ng-app="egenius">
+	
+	<header class="text-center">
+		<nav class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="#/" class="navbar-brand">eGenius Imóveis</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<div ng-view></div>
+	</main>
+
+	<form-contato></form-contato>
+
+	<footer>
+		<h4>&#60; / Thiago Capelo &#62;</h4>
+		<h5>[ - Front-End - ]</h5>
+		<a href="https://github.com/thiagokpelo" title="Github"><i class="fa fa-github fa-3x"></i></a>
+	</footer>
+
+	<!-- Angular and Libs -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-resource.min.js"></script>
+
+	<!-- Controllers and Main -->
+	<script src="js/main.js"></script>
+	<script src="js/services/meus-servicos.js"></script>
+	<script src="js/directives/minhas-diretivas.js"></script>
+	<script src="js/controllers/egenius-controller.js"></script>
+	<script src="js/controllers/imovel-controller.js"></script>
+	<script src="js/controllers/add-controller.js"></script>
+	
+	<!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="assets/js/all.js"></script>
+
+</body>
+</html>

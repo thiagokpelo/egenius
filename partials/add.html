@@ -1,0 +1,62 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-8">
+
+        	<h1>Cadastrando Novo Imóvel</h1>
+
+        	<p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>
+			
+			<form novalidate name="formulario" ng-submit="submit()">
+			    <fieldset>
+			    	<legend>Informações</legend>
+			        <div class="form-group">
+			            <label for="nome">Nome:</label>
+			            <input ng-model="imovel.nome" type="text" id="nome" name="nome" class="form-control" required/>
+			            <span ng-show="formulario.$submitted && formulario.nome.$error.required" class="form-control alert-danger">Nome obrigatório</span>
+			        </div>
+			        <div class="form-group">
+			            <label for="local">Local:</label>
+			            <input ng-model="imovel.local" type="text" id="local" name="local" class="form-control" required/>
+			            <span ng-show="formulario.$submitted && formulario.local.$error.required" class="form-control alert-danger">Local obrigatório</span>
+			        </div>
+			        <div class="form-group">
+			            <label for="sobre">Sobre:</label>
+			            <input ng-model="imovel.sobre" type="text" id="sobre" name="sobre" class="form-control" required/>
+			            <span ng-show="formulario.$submitted && formulario.sobre.$error.required" class="form-control alert-danger">Descrição obrigatória</span>
+			        </div>
+			        <div class="form-group">
+			            <label for="preco">Preço:</label>
+			            <input ng-model="imovel.preco" type="text" id="preco" name="preco" class="form-control" required/>
+			            <span ng-show="formulario.$submitted && formulario.preco.$error.required" class="form-control alert-danger">Preço obrigatório</span>
+			        </div>
+			    </fieldset>
+			    <fieldset>
+				    <legend>Imagem</legend>
+				    <div class="form-group">
+				        <label for="url">Nome da imagem</label>
+				        <input ng-model="imovel.imagens[0].name" type="text" id="name" name="name" class="form-control" required/>
+				        <span ng-show="formulario.$submitted && formulario.name.$error.required" class="form-control alert-danger">Nome da foto obrigatório</span>
+				    </div>
+				    <div class="form-group">
+				        <label for="url">URL</label>
+				        <input ng-model="imovel.imagens[0].url" type="text" id="url" name="url" class="form-control" required/>
+				        <span ng-show="formulario.$submitted && formulario.url.$error.required" class="form-control alert-danger">URL obrigatória</span>
+				    </div>
+				</fieldset>
+				<div class="text-right">
+					<a href="#/" class="btn btn-default btn-lg text-align-right">Voltar</a>
+					<button type="submit" class="btn btn-primary btn-lg" ng-disabled="formulario.$invalid">Adicionar</button>
+				</div>
+			</form>
+			
+        </div>
+
+        <div class="col-md-4">
+            <img ng-if="imovel.imagens[0].url.length > 0" src="{{imovel.imagens[0].url}}" alt="{{imovel.imagens[0].name}}" class="img-responsive img-thumbnail img-imovel" />
+        </div>
+
+    </div>
+    	
+</div>
