@@ -1,4 +1,4 @@
-# egenius - Teste para Vaga Front-End
+# eGenius - Teste para Vaga Front-End
 Tecnologias utilizadas: HTML, CSS, JS, AngularJs, Bootstrap
 
 Modelo para Cadastro de Imóvel
